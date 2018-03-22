@@ -19,7 +19,7 @@ end
 
 post '/' do
   content_type 'application/csv'
-  attachment   'totales.csv'
+  attachment   "totales_#{Date.today.to_s}.csv"
 
   result = process_csv(params)
 
