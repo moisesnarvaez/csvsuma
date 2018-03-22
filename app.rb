@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'csv'
-require 'better_errors'
 
 get '/' do
   erb :index
@@ -14,7 +13,7 @@ post '/' do
   end
 
   content_type 'application/csv'
-  attachment   'data.csv'
+  attachment   'totales.csv'
 
   CSV.generate do |csv|
     result.map do |k, v|
